@@ -70,6 +70,8 @@ public class ShellLocations : MonoBehaviour
                     p.x = (float)(rand_generator.NextDouble() * (max_x - min_x) + min_x);
                     p.z = (float)(rand_generator.NextDouble() * (max_y - min_y) + min_y);
 
+                    if (Math.Pow((2 * p.x - max_x - min_x) / (max_x - min_x), 2) + Math.Pow((2 * p.y - max_y - min_y) / (max_y - min_y), 2) >= 1.0) continue;
+
                     // すでに生成した点に近すぎる場合はやり直す
                     bool failed = false;
                     if (Vector3.Distance(p, new Vector3(start_x, start_y, 0)) < min_distance_start)

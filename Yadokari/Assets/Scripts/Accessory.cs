@@ -13,6 +13,14 @@ public class Accessory : MonoBehaviour, IScoreble
         set { score = value; }
     }
 
+    [SerializeField]
+    private string itemName;
+    public string ItemName
+    {
+        get { return itemName; }
+        set { itemName = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

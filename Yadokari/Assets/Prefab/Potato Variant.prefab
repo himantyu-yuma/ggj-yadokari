@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 846c3a83ffba3fb42ae5fd147cf5553d, type: 2}
+    - target: {fileID: 4897541324989466333, guid: 34e02de1e0f808c4a8860273244aa84b,
+        type: 3}
+      propertyPath: itemName
+      value: "\u30DD\u30C6\u30C8"
+      objectReference: {fileID: 0}
     - target: {fileID: 4935160820955242810, guid: 34e02de1e0f808c4a8860273244aa84b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 5708002683932523392, guid: 34e02de1e0f808c4a8860273244aa84b,
         type: 3}
       propertyPath: m_Name
-      value: Potato
+      value: Potato Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e02de1e0f808c4a8860273244aa84b, type: 3}

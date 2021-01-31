@@ -5,4 +5,10 @@
         get;
         set;
     }
+
+    string ItemName
+    {
+        get;
+        set;
+    }
 }

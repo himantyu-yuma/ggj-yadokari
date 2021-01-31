@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class Yadokari : MonoBehaviour
 {
     /// <summary>
@@ -42,6 +42,16 @@ public class Yadokari : MonoBehaviour
     /// </summary>
     private Vector3 castBox = new Vector3(2, 4, 2);
 
+    /// <summary>
+    /// 効果音鳴らすやつ
+    /// </summary>
+    private AudioSource yadokaraAudio;
+    /// <summary>
+    /// アイテム取得時のSE
+    /// </summary>
+    [SerializeField]
+    private AudioClip itemSound = default;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +63,8 @@ public class Yadokari : MonoBehaviour
         kaigaraTransform = this.transform.Find("Kaigara_pos");
         currentShell = kaigaraTransform.GetComponentInChildren<Kaigara>();
         currentShell.Wear();
+
+        yadokaraAudio = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -126,6 +138,9 @@ public class Yadokari : MonoBehaviour
 
         targetAccesory.GetComponent<Rigidbody>().isKinematic = true;
         targetAccesory.GetComponent<Collider>().enabled = false;
+
+        // 音鳴らす
+        yadokaraAudio.PlayOneShot(itemSound);
     }
 
     private void ChangeShell(Kaigara targetShell)
