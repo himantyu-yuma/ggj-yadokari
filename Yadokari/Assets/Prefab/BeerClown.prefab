@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604310c70efa04b4b9ab09806c96909c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 50
   itemName: "\u304A\u3046\u304B\u3093"

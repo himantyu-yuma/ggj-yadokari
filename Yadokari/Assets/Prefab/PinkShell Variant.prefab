@@ -10,7 +10,17 @@ PrefabInstance:
     - target: {fileID: 5027857113563460871, guid: f3753bde40dd87f4cbb9b1500bc2bb35,
         type: 3}
       propertyPath: m_Name
-      value: PinkShell
+      value: PinkShell Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262421762203059077, guid: f3753bde40dd87f4cbb9b1500bc2bb35,
+        type: 3}
+      propertyPath: itemName
+      value: "\u304A\u3057\u3083\u308C\u8C9D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262421762203059077, guid: f3753bde40dd87f4cbb9b1500bc2bb35,
+        type: 3}
+      propertyPath: score
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5660279036865064893, guid: f3753bde40dd87f4cbb9b1500bc2bb35,
         type: 3}

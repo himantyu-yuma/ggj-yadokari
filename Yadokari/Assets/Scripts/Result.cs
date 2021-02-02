@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class Result : MonoBehaviour
 {
@@ -55,6 +56,8 @@ public class Result : MonoBehaviour
 
         Debug.Log(allScore);
         sumScore.text = $"合計\t{allScore}";
+
+        SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
     }
 
     // Update is called once per frame

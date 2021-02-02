@@ -126,15 +126,26 @@ public class Yadokari : MonoBehaviour
         int randNum = Random.Range(0, vartices.Length);
         Vector3 targetVartix = vartices[randNum];
         Vector3 targetNormal = normals[randNum];
-        Debug.Log(targetVartix);
-        Debug.Log(targetNormal);
+        //Debug.Log(targetVartix);
+        //Debug.Log(targetNormal);
 
         targetAccesory.transform.parent = currentShell.transform;
         targetAccesory.transform.localPosition = targetVartix;
         // ちょっと押し出したい
         // TODO: 押し出し具合どうしようか
         targetAccesory.transform.Translate(targetNormal * 1.5f);
-        //targetAccesory.transform.localEulerAngles = targetNormal;
+        //targetAccesory.transform.LookAt(targetNormal) ;
+        targetAccesory.transform.rotation = Quaternion.LookRotation(this.transform.position - targetNormal);
+
+        //int i = 0;
+        //Debug.Log(currentShell.GetComponent<MeshFilter>().mesh.bounds.Contains(targetAccesory.GetComponent<Collider>().bounds.min));
+        //while (currentShell.GetComponent<MeshFilter>().mesh.bounds.Intersects(targetAccesory.GetComponent<Collider>().bounds))
+        //{
+        //    i++;
+        //    if (i > 100) break;
+
+        //    targetAccesory.transform.Translate(targetNormal * 1.1f);
+        //}
 
         targetAccesory.GetComponent<Rigidbody>().isKinematic = true;
         targetAccesory.GetComponent<Collider>().enabled = false;
